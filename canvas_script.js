@@ -1,6 +1,6 @@
 function OnCanvasClick(){
 	var myCanvas = document.getElementById('canvas');
-	var content = myCanvas.getContent("2d");
+	var context = myCanvas.getContext("2d");
 	
 	$("#canvas").mousedown(function(evt){
 		var offset = $("#canvas").offset();
@@ -12,9 +12,9 @@ function OnCanvasClick(){
 			var offset = $("#canvas").offset();
 			
 			context.lineTo(evt.pageX - offset.left , evt.pageY - offset.top );
-			content.lineWidth = 1;
-			content.strokeStyle = red;
-			content.stroke();
+			context.lineWidth = 1;
+			context.strokeStyle = red;
+			context.stroke();
 		}).mouseup(function(){
 					$( document ).unbind('mousemove');
 					$( document ).unbind('mouseup');
