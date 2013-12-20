@@ -1,5 +1,5 @@
 function OnCanvasClick(){
-	var myCanvas = document.getElementByID('postit');
+	var myCanvas = document.getElementByID('canvas');
 	var content = myCanvas.getContent("2d");
 	
 	$("#canvas").mousedown(function(evt){
