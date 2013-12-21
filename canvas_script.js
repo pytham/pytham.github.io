@@ -18,8 +18,8 @@ function OnCanvasClick(){
 		document.onmouseup = mouseup;
 		
 		function mouseup(evt){
-			document.releaseEvents('mousemove');
-			document.releaseEvents('mouseup');
+			document.removeEventListener('mousemove');
+			document.removeEventListener('mouseup');
 		}
 	}
 
