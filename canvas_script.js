@@ -2,23 +2,11 @@ function OnCanvasClick(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
-	myCanvas.onmousedown(function(evt){
-		var offset = myCanvas.offset();
-		
-		context.beginPath();
-		context.moveTo(evt.pageX - offset.left , evt.pageY - offset.top );
-		
-		document.onmousemove(function(evt){
-			var offset = myCanvas.offset();
-			
-			context.lineTo(evt.pageX - offset.left , evt.pageY - offset.top );
-			context.lineWidth = 1;
-			context.strokeStyle = red;
-			context.stroke();
-		}).onmouseup(function(){
-					document.unbind('mousemove');
-					document.unbind('mouseup');
-		});
-	});
+	myCanvas.onmousedown = mousedwn;
+	
+	function mousedwn(evt){
+		context.font = "12px sans-serif";
+		context.fillText("This is the text entered by the user", 10, 20);
+	}
 	
 }
