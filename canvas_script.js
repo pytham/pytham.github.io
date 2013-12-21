@@ -3,10 +3,21 @@ function OnCanvasClick(){
 	var context = myCanvas.getContext("2d");
 	
 	myCanvas.onmousedown = mousedwn;
+	document.onmousemove = mousemv;
+	document.onmouseup = mouseup;
 	
 	function mousedwn(evt){
-		context.font = "12px sans-serif";
-		context.fillText("This is the text entered by the user", 10, 20);
+		context.beginPath();
+		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+	}
+
+	function mousemv(evt){
+		context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+		context.stroke();
 	}
 	
+	function mouseup(evt){
+		document.unbind('mousemove');
+		document.unbind('mouseup');
+	}
 }
