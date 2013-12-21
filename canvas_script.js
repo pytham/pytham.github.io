@@ -9,13 +9,13 @@ function OnCanvasClick(){
 	function mousedwn(evt){
 		context.beginPath();
 		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
-		
-		function mousemv(evt){
-			context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
-			context.stroke();
-		}
-	}
 
+	}
+	
+	function mousemv(evt){
+		context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+		context.stroke();
+	}
 
 	function mouseup(evt){
 		document.releaseEvents('mousemove');
