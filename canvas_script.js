@@ -3,22 +3,24 @@ function OnCanvasClick(){
 	var context = myCanvas.getContext("2d");
 	
 	myCanvas.onmousedown = mousedwn;
-	document.onmousemove = mousemv;
-	document.onmouseup = mouseup;
 	
 	function mousedwn(evt){
 		context.beginPath();
 		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+		
+		document.onmousemove = mousemv;
 
-	}
-	
-	function mousemv(evt){
-		context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
-		context.stroke();
+		function mousemv(evt){
+			context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+			context.stroke();
+		}
+
+		document.onmouseup = mouseup;
+		
+		function mouseup(evt){
+			document.releaseEvents('mousemove');
+			document.releaseEvents('mouseup');
+		}
 	}
 
-	function mouseup(evt){
-		document.releaseEvents('mousemove');
-		document.releaseEvents('mouseup');
-	}
 }
