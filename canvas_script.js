@@ -2,25 +2,17 @@ function OnCanvasClick(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
-	myCanvas.onmousedown = mousedwn;
-	
-	function mousedwn(evt){
+	$( '#canvas' ).mousedown(function(evt){
 		context.beginPath();
 		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
 		
-		document.onmousemove = mousemv;
-
-		function mousemv(evt){
+		$( document ).mousemove(function(evt){
 			context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
 			context.stroke();
-		}
+		}).mouseup(function(evt){
+			$( document ).unbind('mousemove');
+			$( document ).unbind('mouseup');
 
-		document.onmouseup = mouseup;
-		
-		function mouseup(evt){
-			document.removeEventListener('mousemove');
-			document.removeEventListener('mouseup');
-		}
-	}
-
+	});
+});
 }
