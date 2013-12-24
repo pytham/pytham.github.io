@@ -1,13 +1,26 @@
-.tooltip	
+.canvas	
 {
 	display: inline;
 	position: relative;
 	order:1px solid #000000;
 	background:#0F9F00;
 	box-shadow: 10px 10px 5px #888888;
+	width:200;
+	height:200;
 }
 
-.tooltip:hover:after
+.button	
+{
+	display: inline;
+	position: relative;
+	order:1px solid #000000;
+	background:#0F9F00;
+	box-shadow: 5px 5px 3px #888888;
+	width:20;
+	height:20;
+}
+
+/*.tooltip:hover:after
 {
 	content: attr(tooltip);
 	background: #333;
@@ -32,4 +45,4 @@
     left: 50%;
     position: absolute;
     z-index: 99;
-}
+}*/
