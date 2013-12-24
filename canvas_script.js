@@ -1,3 +1,4 @@
+function onCanvas(){
 document.getElementById('canvas').addEventListener('mousedown',function(evt){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
@@ -14,6 +15,7 @@ document.getElementById('canvas').addEventListener('mousedown',function(evt){
 
 	});
 });
+}
 
 function moveCanvas(){
 	$( document ).mousemove(function(evt){
