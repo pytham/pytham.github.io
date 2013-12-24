@@ -1,9 +1,9 @@
-function onStartWrite(){
+$("#canvas").addEventListener('mousedown', function onStartWrite(evt){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
 		context.beginPath();
-		context.moveTo(window.event.pageX - myCanvas.offsetLeft, window.event.pageY - myCanvas.offsetTop);
+		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
 		
 		$( document ).mousemove(function(evt){
 			context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
@@ -13,7 +13,7 @@ function onStartWrite(){
 			$( document ).unbind('mouseup');
 
 	});
-}
+});
 
 function moveCanvas(){
 	$( document ).mousemove(function(evt){
