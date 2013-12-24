@@ -1,4 +1,4 @@
-function OnStartWrite(){
+function onStartWrite(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
