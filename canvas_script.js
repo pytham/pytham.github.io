@@ -1,4 +1,4 @@
-$("#canvas").addEventListener('mousedown', function onStartWrite(evt){
+$("#canvas").mousedown(function(evt){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
