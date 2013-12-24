@@ -1,4 +1,4 @@
-function OnStartWrite(evt){
+function OnStartWrite(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
@@ -16,7 +16,7 @@ function OnStartWrite(evt){
 	});
 }
 
-function moveCanvas(evt){
+function moveCanvas(){
 	$( document ).mousemove(function(evt){
 			$( '#canvas' ).offset({ top: evt.pageY, left: evt.pageX})
 		}).mousedown(function(evt){
