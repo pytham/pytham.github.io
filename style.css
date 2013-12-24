@@ -1,26 +1,38 @@
-.canvas	
+.canvas        
 {
-	display: inline;
-	position: relative;
-	border:1px;
-	border-color:; #000000;
-	background:#0F9F00;
-	box-shadow: 10px 10px 5px #888888;
-	width:200px;
-	height:200px;
-	cursor:crosshair;
+        display: block;
+        border:1px;
+        border-color:; #000000;
+        background:#0F9F00;
+        box-shadow: 10px 10px 5px #888888,
+ 	inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+  	inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+        width:200px;
+        height:200px;
+        cursor:crosshair;
 }
 
-.button	
+.toolbar        
 {
-	display: inline;
-	position: relative;
-	border:1px;
-	border-color:; #000000;
-	background:#0F9F00;
-	box-shadow: 5px 5px 3px #888888;
-	width:15px;
-	height:15px;
+        display: block;
+        background-color: rgba(0,0,0,.3);
+        box-shadow: 10px 10px 5px #888888,
+        inset 0 -1px 1px rgba(0,0,0,0.5),
+        inset 0 1px 1px rgba(255,255,255,0.8);
+        width:200px;
+        height:20px;
+        margin-bottom:3px;
+}
+
+.button       
+{
+        display: block;
+        background-color: rgba(0,0,0,.7);
+        box-shadow: 2px 2px 4px pink inset,
+		   -2px -2px 4px pink inset;
+        width:15px;
+        height:15px;
+        margin-bottom:3px;
 }
 
 /*.tooltip:hover:after
