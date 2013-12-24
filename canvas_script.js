@@ -22,5 +22,5 @@ function moveCanvas(){
 		}).mousedown(function(evt){
 			$( document ).unbind('mousemove');
 			$( document ).unbind('mousedown');
-		{);	
+		});	
 }
