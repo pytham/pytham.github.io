@@ -6,7 +6,12 @@
     <script src='jquery2.js' type="text/javascript">   </script>
     <script src='canvas_script.js' type="text/javascript"></script>
     <link type='text/css' rel='stylesheet'  href='style.css'></link>
-    <img title="Move the Postit" class='button' src='move.jpg' onclick='moveCanvas()'/>
+    <div id="postit">
+    <div id="toolbar" class="toolbar">
+    <img title="Move" class='button' src='move_canvas.jpg' onclick='moveCanvas()'/>
+    <img title="Clear" class='button' src='clear.jpg' onclick='clearCanvas()'/>
+    </div>
     <canvas id='canvas' title="I'm the Postit" class='canvas' onmouseover='onCanvas()'> </canvas>
+    </div>
   </body>
 </html>
