@@ -7,7 +7,7 @@ document.getElementById('canvas').addEventListener('mousedown',function(evt){
 		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
 		
 		$( document ).mousemove(function(evt){
-			context.lineTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+			context.lineTo(evt.pageX, evt.pageY - myCanvas.offsetTop);
 			context.stroke();
 		}).mouseup(function(evt){
 			$( document ).unbind('mousemove');
@@ -19,9 +19,11 @@ document.getElementById('canvas').addEventListener('mousedown',function(evt){
 
 function moveCanvas(){
 	$( document ).mousemove(function(evt){
+			document.style.cursor=move;
 			$( '#canvas' ).offset({ top: evt.pageY, left: evt.pageX})
 		}).mousedown(function(evt){
 			$( document ).unbind('mousemove');
 			$( document ).unbind('mousedown');
+			document.style.cursor=default;
 		});	
 }
