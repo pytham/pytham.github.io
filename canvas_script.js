@@ -12,9 +12,9 @@ function onCanvas(){
 			var offset = $("#canvas").offset();
 			
 			context.lineTo(evt.pageX - offset.left , evt.pageY - offset.top );
-			content.lineWidth = 1;
-			content.strokeStyle = red;
-			content.stroke();
+			context.lineWidth = 1;
+			context.strokeStyle ='black';
+			context.stroke();
 		}).mouseup(function(){
 					$( document ).unbind('mousemove');
 					$( document ).unbind('mouseup');

@@ -1,6 +1,6 @@
 .canvas        
 {
-        display: block;
+        display: inline;
         border:1px;
         border-color:; #000000;
         background:#0F9F00;
