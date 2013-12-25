@@ -26,13 +26,14 @@
 
 .button       
 {	
-    box-shadow: 1px 1px 1px black, -1px -1px 2px white;
+    box-shadow: 1px 1px 1px #000000, -1px -1px 2px #FFFFFF;
     display: inline;
-    float: right;
+    float: left;
     height: 15px;
-    width: 15px;
+    margin-right: 2px;
     margin-top: 2.5px;
-    margin-right: 4px;
+    width: 15px;
+    margin-left: 2px;
 }
 
 /*.tooltip:hover:after
