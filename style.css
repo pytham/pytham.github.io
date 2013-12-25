@@ -26,13 +26,13 @@
 
 .button       
 {	
-	vertical-align:middle;
-	float: right;
-        display: inline;
-        box-shadow: 1px 1px 1px rgba(0,0,0,.7) inset,
-		   -1px -1px 1px rgba(0,0,0,.7) inset;
-        width:15px;
-        height:15px;
+    box-shadow: 1px 1px 1px black, -1px -1px 2px white;
+    display: inline;
+    float: right;
+    height: 15px;
+    width: 15px;
+    margin-top: 2.5px;
+    margin-right: 4px;
 }
 
 /*.tooltip:hover:after
