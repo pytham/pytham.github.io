@@ -31,5 +31,5 @@ function moveCanvas(){
 function clearCanvas(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
-	context.fillRect('200','200','')
+	context.clearRect(0,0,200,200);
 }
