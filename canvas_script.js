@@ -3,11 +3,14 @@ document.getElementById('canvas').addEventListener('mousedown',function(evt){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
+	var offset = $("#canvas").offset();
+	
 		context.beginPath();
-		context.moveTo(evt.pageX - myCanvas.offsetLeft, evt.pageY - myCanvas.offsetTop);
+		context.moveTo(evt.pageX - offset.left, evt.pageY - offset.top);
 		
 		$( document ).mousemove(function(evt){
-			context.lineTo(evt.pageX, evt.pageY - myCanvas.offsetTop);
+			var offset = $("#canvas").offset();
+			context.lineTo(evt.pageX - offset.left, evt.pageY - offset.top);
 			context.stroke();
 		}).mouseup(function(evt){
 			$( document ).unbind('mousemove');
@@ -20,7 +23,7 @@ document.getElementById('canvas').addEventListener('mousedown',function(evt){
 function moveCanvas(){
 	$( document ).mousemove(function(evt){
 			//document.style.cursor='move';
-			$( '#canvas' ).offset({ top: evt.pageY, left: evt.pageX})
+			$( '#postit' ).offset({ top: evt.pageY, left: evt.pageX})
 		}).mousedown(function(evt){
 			$( document ).unbind('mousemove');
 			$( document ).unbind('mousedown');
@@ -31,5 +34,5 @@ function moveCanvas(){
 function clearCanvas(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
-	context.clearRect(0,0,200,200);
+	context.clearRect(0,0,myCanvas.width,myCanvas.height);
 }
