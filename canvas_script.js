@@ -19,12 +19,12 @@ document.getElementById('canvas').addEventListener('mousedown',function(evt){
 
 function moveCanvas(){
 	$( document ).mousemove(function(evt){
-			document.style.cursor='move';
+			//document.style.cursor='move';
 			$( '#canvas' ).offset({ top: evt.pageY, left: evt.pageX})
 		}).mousedown(function(evt){
 			$( document ).unbind('mousemove');
 			$( document ).unbind('mousedown');
-			document.style.cursor='default';
+			//document.style.cursor='default';
 		});	
 }
 
