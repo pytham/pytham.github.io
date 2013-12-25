@@ -25,14 +25,14 @@
 }
 
 .button       
-{
-        display: block;
-        background-color: rgba(0,0,0,.7);
-        box-shadow: 2px 2px 4px pink inset,
-		   -2px -2px 4px pink inset;
+{	
+	vertical-align:middle;
+	float: right;
+        display: inline;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.7) inset,
+		   -1px -1px 1px rgba(0,0,0,.7) inset;
         width:15px;
         height:15px;
-        margin-bottom:3px;
 }
 
 /*.tooltip:hover:after
