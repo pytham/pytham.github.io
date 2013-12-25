@@ -1,6 +1,6 @@
 function onCanvas(){
 	var myCanvas = document.getElementById('canvas');
-	var context = myCanvas.getContent("2d");
+	var context = myCanvas.getContext("2d");
 	
 	$("#canvas").mousedown(function(evt){
 		var offset = $("#canvas").offset();
