@@ -9,7 +9,7 @@
   	inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
         width:200px;
         height:200px;
-        cursor:url(pencil.cur);
+        cursor:url('pencil.cur'),default;
 }
 
 .toolbar        
