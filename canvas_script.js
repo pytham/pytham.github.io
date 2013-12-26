@@ -2,18 +2,16 @@ function onCanvas(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
 	
-	var docToCanv = Math.min(myCanvas.width / $('body').width(), myCanvas.height/$('body').height());
-	
 	$("#canvas").mousedown(function(evt){
 		var offset = $("#canvas").offset();
 		
 		context.beginPath();
-		context.moveTo(evt.pageX*docToCanv - offset.left, evt.pageY*docToCanv - offset.top );
+		context.moveTo(evt.pageX - offset.left, evt.pageY - offset.top );
 		
 		$(document).mousemove(function(evt){
 			var offset = $("#canvas").offset();
 			
-			context.lineTo(evt.pageX*docToCanv - offset.left, evt.pageY*docToCanv - offset.top);
+			context.lineTo(evt.pageX - offset.left, evt.pageY - offset.top);
 			context.lineWidth = 1;
 			context.strokeStyle ='black';
 			context.stroke();
