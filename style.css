@@ -24,7 +24,7 @@
         margin-bottom:3px;
 }
 
-/*.button       
+.button       
 {	
     box-shadow: 1px 1px 1px #000000, -1px -1px 2px #FFFFFF;
     display: inline;
@@ -35,7 +35,7 @@
     width: 15px;
     margin-left: 2px;
     cursor:hand;
-} */
+} 
 
 /*.tooltip:hover:after
 {
