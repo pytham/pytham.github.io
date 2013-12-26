@@ -1,4 +1,4 @@
-/*.canvas        
+.canvas        
 {
         display: inline;
         border:1px;
@@ -35,7 +35,7 @@
     width: 15px;
     margin-left: 2px;
     cursor:hand;
-} */
+} 
 
 /*.tooltip:hover:after
 {
