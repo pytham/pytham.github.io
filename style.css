@@ -4,9 +4,9 @@
         border:1px;
         border-color:; #000000;
         background:#0F9F00;
-       /* box-shadow: 10px 10px 5px #888888,
+        box-shadow: 10px 10px 5px #888888,
  	inset 0 -1px 1px rgba(0,0,0,0.5), 
-  	inset 0 1px 1px rgba(255,255,255,0.8); */
+  	inset 0 1px 1px rgba(255,255,255,0.8); 
         width:200px;
         height:200px;
         cursor:url('pencil.cur'),default;
@@ -24,7 +24,7 @@
         margin-bottom:3px;
 }
 
-.button       
+/*.button       
 {	
     box-shadow: 1px 1px 1px #000000, -1px -1px 2px #FFFFFF;
     display: inline;
@@ -35,7 +35,7 @@
     width: 15px;
     margin-left: 2px;
     cursor:hand;
-} 
+} */
 
 /*.tooltip:hover:after
 {
