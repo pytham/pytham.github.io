@@ -11,7 +11,7 @@ function onCanvas(){
 		$(document).mousemove(function(evt){
 			var offset = $("#canvas").offset();
 			
-			context.lineTo(evt.pageX , evt.pageY);
+			context.lineTo(evt.pageX - offset.left, evt.pageY - offset.top );
 			context.lineWidth = 1;
 			context.strokeStyle ='black';
 			context.stroke();
