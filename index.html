@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hello World</h1>
-    <p>Here, have a PostIt</p>
+  <body onload=onBodyLoad()>
+    <h1>Glass Board</h1>
     <script src='jquery2.js' type="text/javascript">   </script>
     <script src='canvas_script.js' type="text/javascript"></script>
     <link type='text/css' rel='stylesheet'  href='style.css'></link>
     <div id="postit">
-    <div id="toolbar" class="toolbar">
+    <div id="toolbar" class="glasstoolbar">
     <img title="Move" class='button' src='move_icon.jpg' onclick='moveCanvas()'/>
     <img title="Clear" class='button' src='clear_icon.jpg' onclick='clearCanvas()'/>
     </div>
-    <canvas id='canvas' title="I'm the Postit" class='canvas' onmouseover='onCanvas()' width='200' height='200'> </canvas>
+    <canvas id='canvas' title="I'm the Postit" class='glasscanvas' onmouseover='onCanvas()' width='600' height='400'> </canvas>
     </div>
   </body>
 </html>

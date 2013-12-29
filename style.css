@@ -1,11 +1,31 @@
+
+
+body {
+background-image: url("wood_bg.jpg");
+text-align:center;
+}
+h1{
+	background: rgba(0,0,0,0.25);
+	font-family: Garamond, serif;
+line-height: 1em;
+color: #fff9d6;
+font-weight:bold;
+font-size: 60px;
+text-shadow:
+        0 2px 8px rgba(0,0,0,0.5), /* Exterior Shadow */
+        inset 0 1px rgba(255,255,255,0.3), /* Top light Line */
+        inset 0 5px rgba(255,255,255,0.2), /* Top Light Shadow */
+        inset 0 5px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
+        inset 0 -10px 30px rgba(0,0,0,0.3); /* Dark Background */
+}
 .canvas        
 {
         display: inline;
         border:1px;
-        border-color:; #000000;
-        background:#0F9F00;
+        border-color: #000000;
+        background: #0F9F00;
         box-shadow: 10px 10px 5px #888888,
- 	inset 0 -1px 1px rgba(0,0,0,0.5), 
+ 		inset 0 -1px 1px rgba(0,0,0,0.5), 
   	inset 0 1px 1px rgba(255,255,255,0.8); 
         cursor:url('pencil.cur'),default;
 }
@@ -24,17 +44,113 @@
 
 .button       
 {	
-    box-shadow: 1px 1px 1px #000000, -1px -1px 2px #FFFFFF;
+    box-shadow: inset 1px 1px 1px #000000, inset -1px -1px 2px #000000,
+    				  1px 1px 1px black, -1px -1px 2px grey;
     display: inline;
     float: left;
     height: 15px;
-    margin-right: 2px;
-    margin-top: 2.5px;
+    margin-right: 3px;
+    margin-top: -1px;
     width: 15px;
-    margin-left: 2px;
+    margin-left: 3px;
     cursor:hand;
+    border-radius: 3px;
 } 
 
+.glasstoolbar {
+	color:#ffffff;
+	padding:10px;
+	margin-bottom:3px;
+ 	width:600px;
+    height:10px;	
+	
+	border: 1px solid rgba(0,0,0,0.5);
+	border-bottom: 3px solid rgba(0,0,0,0.5);
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	background: rgba(0,0,0,0.25);
+
+/*     -o-box-shadow:  */
+/*         0 2px 8px rgba(0,0,0,0.5), */
+/*         inset 0 1px rgba(255,255,255,0.3), */
+/*         inset 0 10px rgba(255,255,255,0.2), */
+/*         inset 0 10px 20px rgba(255,255,255,0.25), */
+/*         inset 0 -15px 30px rgba(0,0,0,0.3); */
+
+/*     -webkit-box-shadow:  */
+/*         0 2px 8px rgba(0,0,0,0.5), */
+/*         inset 0 1px rgba(255,255,255,0.3), */
+/*         inset 0 10px rgba(255,255,255,0.2), */
+/*         inset 0 10px 20px rgba(255,255,255,0.25), */
+/*         inset 0 -15px 30px rgba(0,0,0,0.3); */
+
+/*     -moz-box-shadow: */
+/*         0 2px 8px rgba(0,0,0,0.5), */
+/*         inset 0 1px rgba(255,255,255,0.3), */
+/*         inset 0 10px rgba(255,255,255,0.2), */
+/*         inset 0 10px 20px rgba(255,255,255,0.25), */
+/*         inset 0 -15px 30px rgba(0,0,0,0.3); */
+	
+	box-shadow: 
+        0 2px 8px rgba(0,0,0,0.5), /* Exterior Shadow */
+        inset 0 1px rgba(255,255,255,0.3), /* Top light Line */
+        inset 0 5px rgba(255,255,255,0.2), /* Top Light Shadow */
+        inset 0 5px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
+        inset 0 -10px 30px rgba(0,0,0,0.3); /* Dark Background */
+
+	display: block;
+	text-decoration: none;
+}
+
+.glasscanvas {
+cursor: url('pencil.cur'),default;
+	color:#ffffff;
+	padding:10px;
+	margin-bottom:3px;
+
+	border: 1px solid rgba(0,0,0,0.5);
+	border-bottom: 3px solid rgba(0,0,0,0.5);
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	background: rgba(0,0,0,0.25);
+
+    -o-box-shadow: 
+        0 2px 8px rgba(0,0,0,0.5),
+        inset 0 1px rgba(255,255,255,0.3),
+        inset 0 10px rgba(255,255,255,0.2),
+        inset 0 10px 20px rgba(255,255,255,0.25),
+        inset 0 -15px 30px rgba(0,0,0,0.3);
+
+    -webkit-box-shadow: 
+        0 2px 8px rgba(0,0,0,0.5),
+        inset 0 1px rgba(255,255,255,0.3),
+        inset 0 10px rgba(255,255,255,0.2),
+        inset 0 10px 20px rgba(255,255,255,0.25),
+        inset 0 -15px 30px rgba(0,0,0,0.3);
+
+    -moz-box-shadow:
+        0 2px 8px rgba(0,0,0,0.5),
+        inset 0 1px rgba(255,255,255,0.3),
+        inset 0 10px rgba(255,255,255,0.2),
+        inset 0 10px 20px rgba(255,255,255,0.25),
+        inset 0 -15px 30px rgba(0,0,0,0.3);
+	
+	box-shadow: 
+        0 2px 8px rgba(0,0,0,0.5), /* Exterior Shadow */
+        inset 0 1px rgba(255,255,255,0.3), /* Top light Line */
+        inset 0 7px rgba(255,255,255,0.2), /* Top Light Shadow */
+        inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
+        inset 0 -15px 30px rgba(0,0,0,0.3); /* Dark Background */
+
+	display: block;
+	text-decoration: none;
+}
 /*.tooltip:hover:after
 {
 	content: attr(tooltip);

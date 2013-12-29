@@ -1,3 +1,11 @@
+function onBodyLoad(){
+	$("div#postit").css("margin-left",function () {
+		
+		return (($(window).width() / 2) - 300)+"px";
+
+	});
+}
+
 function onCanvas(){
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext("2d");
@@ -6,14 +14,14 @@ function onCanvas(){
 		var offset = $("#canvas").offset();
 		
 		context.beginPath();
-		context.moveTo(evt.pageX - offset.left, evt.pageY - offset.top );
+		context.moveTo(evt.pageX - offset.left - 25, evt.pageY - offset.top + 5 );
 		
 		$(document).mousemove(function(evt){
 			var offset = $("#canvas").offset();
 			
-			context.lineTo(evt.pageX - offset.left, evt.pageY - offset.top);
+			context.lineTo(evt.pageX - offset.left - 25, evt.pageY - offset.top + 5);
 			context.lineWidth = 1;
-			context.strokeStyle ='black';
+			context.strokeStyle ='orange';
 			context.stroke();
 		}).mouseup(function(){
 					$( document ).unbind('mousemove');
