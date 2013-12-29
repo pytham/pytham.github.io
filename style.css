@@ -5,18 +5,11 @@ background-image: url("wood_bg.jpg");
 text-align:center;
 }
 h1{
-	background: rgba(0,0,0,0.25);
-	font-family: Garamond, serif;
+font-family: Garamond ;
 line-height: 1em;
-color: #fff9d6;
-font-weight:bold;
+color: rgba(70,98,211,0.5);
 font-size: 60px;
-text-shadow:
-        0 2px 8px rgba(0,0,0,0.5), /* Exterior Shadow */
-        inset 0 1px rgba(255,255,255,0.3), /* Top light Line */
-        inset 0 5px rgba(255,255,255,0.2), /* Top Light Shadow */
-        inset 0 5px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
-        inset 0 -10px 30px rgba(0,0,0,0.3); /* Dark Background */
+text-shadow:0px 0px 0 rgb(70,98,211),1px 1px 0 rgb(55,83,196),2px 2px 0 rgb(41,69,182),3px 3px 0 rgb(26,54,167),4px 4px 0 rgb(12,40,153),5px 5px 0 rgb(-3,25,138), 6px 6px 0 rgb(-17,11,124),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
 }
 .canvas        
 {
